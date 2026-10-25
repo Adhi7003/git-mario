@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "git-quest", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8000", "--bind", "127.0.0.1"], "port": 8000 },
+    { "name": "retro-skill", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8010", "--bind", "127.0.0.1", "--directory", "/Users/adhi/.claude/skills/retro-quest-ui"], "port": 8010 }
+  ]
+}

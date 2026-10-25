@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git Quest</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23fcd34d' stroke='%23b7791f' stroke-width='3'/><ellipse cx='16' cy='16' rx='4' ry='8' fill='none' stroke='%23b7791f' stroke-width='2.5'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-screen="map">
+  <header class="topbar">
+    <button class="logo" data-nav="map" aria-label="World map">GIT<span>QUEST</span></button>
+    <div class="stats">
+      <span title="Coins">🪙 <b id="tb-coins">0</b></span>
+      <span title="Stars (levels finished without hints)">⭐ <b id="tb-stars">0</b></span>
+      <span title="Daily streak">🔥 <b id="tb-streak">0</b></span>
+    </div>
+    <nav>
+      <button class="nav-btn" data-nav="map">🗺 Map</button>
+      <button class="nav-btn" data-nav="cheats">📜 Cheat sheet</button>
+      <button class="nav-btn" data-nav="sandbox">🧪 Sandbox</button>
+      <button class="nav-btn icon" data-nav="settings" aria-label="Settings">⚙️</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="screen-map" class="screen">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Git Quest</h1>
+          <p>Master the terminal and git, one small level a day. Type real commands, watch your history grow.</p>
+        </div>
+        <div id="today"></div>
+      </div>
+      <div id="worlds"></div>
+      <div class="ground"></div>
+    </section>
+
+    <section id="screen-play" class="screen" hidden>
+      <div class="mission">
+        <div class="mission-main">
+          <h2 id="mission-title"></h2>
+          <p id="mission-story"></p>
+          <div id="actions"></div>
+        </div>
+        <ul id="goals" class="goals"></ul>
+        <div class="mission-btns">
+          <button class="btn small" id="btn-brief">📖 Briefing</button>
+          <button class="btn small" id="btn-hint">💡 Hint</button>
+          <button class="btn small" id="btn-restart">↺ Restart</button>
+        </div>
+      </div>
+      <div class="play-grid">
+        <div id="terminal" class="terminal"></div>
+        <div class="viz">
+          <div class="panel graph-panel">
+            <div class="panel-title" id="viz-title"></div>
+            <div id="graph"></div>
+          </div>
+          <div id="areas" class="areas" hidden></div>
+          <div id="castle" class="panel castle" hidden>
+            <div class="panel-title" id="castle-title"></div>
+            <div id="castle-graph"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-cheats" class="screen" hidden>
+      <div class="cheats-head"><h1>📜 Cheat sheet</h1><button class="btn small" id="btn-print">🖨 Print</button></div>
+      <p class="muted">Every command you have unlocked so far. Finish levels to reveal more.</p>
+      <div id="cheats"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
